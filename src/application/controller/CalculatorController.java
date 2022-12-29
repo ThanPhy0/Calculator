@@ -1,15 +1,20 @@
-package application;
+package application.controller;
 
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import application.model.Calculator;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
-public class CalculatorController {
+public class CalculatorController implements Initializable {
 	@FXML
 	private Label result;
 
-	private Calculator cal = new Calculator();
+	private Calculator cal;
 	private boolean start = true;
 	private String operator = null;
 	private double num1;
@@ -34,7 +39,7 @@ public class CalculatorController {
 			operator = value;
 			num1 = Double.parseDouble(result.getText());
 			showLabel("");
-		} else {
+		}else {
 			if (operator == null) {
 				return;
 			}
@@ -49,6 +54,11 @@ public class CalculatorController {
 			reset();
 		}
 	}
+	
+	@FXML
+	public void clear() {
+		showLabel("0");
+	}
 
 	private void showLabel(String text) {
 		result.setText(text);
@@ -57,5 +67,11 @@ public class CalculatorController {
 	public void reset() {
 		operator = null;
 		start = true;
+	}
+
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		cal = new Calculator();
+		
 	}
 }

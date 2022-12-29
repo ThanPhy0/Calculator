@@ -1,0 +1,42 @@
+.main-background{
+	-fx-background-color: #1f1c1c;
+}
+
+.btn-color{
+	-fx-background-color: #474544;
+	-fx-text-fill: white;
+	-fx-background-radius: 20px;
+	-fx-font-size: 20px;
+}
+
+.btn-equal{
+	-fx-background-color: #1bf242;
+	-fx-text-fill: white;
+	-fx-background-radius: 20px;
+	-fx-font-size: 20px;
+}
+
+.btn-operator{
+	-fx-background-color: #f2d61b;
+	-fx-text-fill: white;
+	-fx-background-radius: 20px;
+	-fx-font-size: 20px;
+}
+
+.btn-clear{
+	-fx-background-color: #d4444d;
+	-fx-text-fill: white;
+	-fx-background-radius: 20px;
+	-fx-font-size: 20px;
+}
+
+.show-cal{
+	-fx-background-color: #b8b4b4;
+	-fx-border-radius: 20px;
+	-fx-background-radius: 20px;
+}
+
+.font-size-cal{
+	-fx-font-size: 40px;
+}
+
